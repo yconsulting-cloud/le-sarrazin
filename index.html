@@ -329,7 +329,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
             <div class="trust__inner">
                 <div class="trust__item"><span class="trust__stars">★★★★★</span><span>4.9/5 sur Google</span></div>
                 <div class="trust__item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Quai Mille Sabords, Capbreton</span></div>
-                <div class="trust__item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><span>Ouvert tous les jours</span></div>
+                <div class="trust__item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><span>Ouvert du Mercredi au Dimanche</span></div>
             </div>
         </div>
     </div>
@@ -452,7 +452,8 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
                     <div class="contact__item"><h4>Adresse</h4><p>Quai Mille Sabords (face au Regalty)<br>40130 Capbreton</p></div>
                     <div class="contact__item"><h4>Téléphone</h4><a href="tel:0676933717">06 76 93 37 17</a></div>
                     <div class="contact__item"><h4>Instagram</h4><a href="https://www.instagram.com/lesarrazinhossegor/" target="_blank">@lesarrazinhossegor</a></div>
-                    <div class="contact__hours"><h4>Horaires d'ouverture</h4><div class="contact__hours-row"><span>Ouvert tous les jours</span><span>Midi et soir</span></div>
+                    <div class="contact__hours"><h4>Horaires d'ouverture</h4><div class="contact__hours-row"><span>Ouvert du Mercredi au Dimanche</span><span>De 7h30 à 22h</span></div>
+<div class="contact__hours-row"><span>Fermé le Lundi et Mardi </span><span>undefined</span></div>
 <div class="contact__hours-row"><span>Service traiteur</span><span>Sur commande</span></div></div>
                 </div>
                 <iframe class="contact__map fade-in-right" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2889.5!2d-1.4361295!3d43.6517842!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd515b02bf8745cd%3A0x8aaf239b616bc457!2sRestaurant%20LE%20SARRAZIN!5e0!3m2!1sfr!2sfr!4v1700000000000" allowfullscreen loading="lazy" title="Localisation"></iframe>
@@ -521,7 +522,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     const days = ['dimanche','lundi','mardi','mercredi','jeudi','vendredi','samedi'];
     const dayName = days[today.getDay()];
     const dateStr = today.toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
-    const CFG = { name: 'Le Sarrazin', prompt: `Nous sommes ${dayName} ${dateStr}. Tu es l'assistant virtuel du restaurant Le Sarrazin, spécialités tunisiennes et orientales à Capbreton. Tu représentes l'établissement. Réponds TOUJOURS dans la langue du client (français, anglais, espagnol...). FUSEAU HORAIRE : Europe/Paris (heure française). Adresse : Quai Mille Sabords (face au Regalty), 40130 Capbreton. Téléphone réservation : 06 76 93 37 17. Chef : Riadh. Horaires : Ouvert tous les jours midi et soir. Spécialités : couscous, tajines, keftas, brick, salade tunisienne, légumes farcis, pâtisseries orientales, thé à la menthe. Service traiteur disponible. Prix : 15-25€. Ambiance orientale chaleureuse. Pensez à réserver par téléphone ! Réponds en 2-3 phrases max, sois chaleureux et accueillant. Termine par [SUGGESTIONS:Réserver|Horaires|La carte]`, welcome: 'Bienvenue au Sarrazin ! Comment puis-je vous aider ?', suggestions: ['Réserver','Horaires','La carte'] };
+    const CFG = { name: 'Le Sarrazin', prompt: `Nous sommes ${dayName} ${dateStr}. Tu es l'assistant virtuel du restaurant Le Sarrazin, spécialités tunisiennes et orientales à Capbreton. Tu représentes l'établissement. Réponds TOUJOURS dans la langue du client (français, anglais, espagnol...). FUSEAU HORAIRE : Europe/Paris (heure française). Adresse : Quai Mille Sabords (face au Regalty), 40130 Capbreton. Téléphone réservation : 06 76 93 37 17. Chef : Riadh. Horaires : Ouvert du Mercredi au Dimanche, de 7h30 à 22h. Spécialités : couscous, tajines, keftas, brick, salade tunisienne, légumes farcis, pâtisseries orientales, thé à la menthe. Service traiteur disponible. Prix : 15-25€. Ambiance orientale chaleureuse. Pensez à réserver par téléphone ! Réponds en 2-3 phrases max, sois chaleureux et accueillant. Termine par [SUGGESTIONS:Réserver|Horaires|La carte]`, welcome: 'Bienvenue au Sarrazin ! Comment puis-je vous aider ?', suggestions: ['Réserver','Horaires','La carte'] };
     const nav = document.getElementById('nav');
     window.addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 50));
     const burger = document.getElementById('navBurger'), mobNav = document.getElementById('navMobile'), overlay = document.getElementById('navOverlay');
